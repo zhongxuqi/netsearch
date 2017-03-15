@@ -1,0 +1,27 @@
+div.zxq-logo {
+	margin-top: 10%;
+}
+div.zxq-logo>img {
+	margin: 0px auto;
+	width: 100%;
+}
+div.zxq-search-content {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+div.zxq-searcher-tag {
+	margin: 20px auto;
+}
+div.zxq-searcher-tag button {
+	margin: 10px;
+	float: left;
+}
+a.zxq_page-tab {
+	cursor: pointer;
+}
+button#zxq-loading-more {
+	margin: 0px auto 100px auto;
+}
+a.search-result-item {
+	margin: 10px;
+}

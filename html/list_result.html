@@ -1,0 +1,26 @@
+<div class="row clearfix">
+	<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 zxq-search-content">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="请输入搜索内容" ng-model="keyword" onkeydown="if (event.keyCode==13) {angular.element(this).scope().search(angular.element(this).scope().keyword)}" autofocus="true">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button" ng-click="search(keyword)">搜索一下</button>
+			</span>
+		</div>
+	</div>
+</div>
+<ul class="nav nav-tabs  nav-justified">
+	<li ng-repeat="Searcher in Searchers" role="presentation" ng-class="Searcher.state">
+		<a ng-click="switchState(Searcher)" class="zxq_page-tab">{{Searcher.name}}</a>
+	</li>
+</ul>
+<div class="list-group">
+	<a class="list-group-item search-result-item"  ng-repeat="resultItem in Searchers[currIndex].result_list" href="{{resultItem.Link}}" target="_blank">
+		<h4  class="list-group-item-heading">{{resultItem.Title}}</h4>
+		<p class="list-group-item-text">{{resultItem.Abstract}}</p>
+	</a>
+</div>
+<div class="col-sm-offset-5 col-sm-2 col-md-offset-5 col-md-2 col-lg-offset-5 col-lg-2">
+	<button type="button" id="zxq-loading-more" data-loading-text="加载中..." class="btn btn-primary" autocomplete="off">
+		点击加载更多
+	</button>
+</div>

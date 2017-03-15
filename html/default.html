@@ -1,0 +1,24 @@
+<div class="row clearfix">
+	<div class="zxq-logo col-md-offset-4 col-md-3 col-lg-offset-4 col-lg-3 col-xm-offset-4 col-xm-3">
+		<a href="#" class="thumbnail">
+			<img src="/html/image/logo_search.png"/>
+		</a>
+	</div>
+</div>
+<div class="row clearfix">
+	<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 zxq-search-content">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="请输入搜索内容" ng-model="keyword"  onkeydown="if (event.keyCode==13) {angular.element(this).scope().search(angular.element(this).scope().keyword)}" autofocus="true">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button" ng-click="search(keyword)">搜索一下</button>
+			</span>
+		</div>
+	</div>
+</div>
+<div class="row clearfix">
+	<div class="zxq-searcher-tag col-md-offset-2 col-md-8 col-xm-offset-2 col-xm-8 col-lg-offset-2 col-lg-8">
+		<div ng-repeat="item in searcherList">
+			<button type="button" class="btn btn-primary btn-lg" ng-class="item.state" ng-click="onTagClick(item)">{{item.name}}</button>
+		</div>
+	</div>
+</div>
